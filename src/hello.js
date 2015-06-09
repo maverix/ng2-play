@@ -4,7 +4,10 @@ import {ComponentAnnotation as Component, ViewAnnotation as View, bootstrap, NgI
     selector: 'hello'
 })
 @View({
-    template: `<span *ng-if="name">Hello, {{name}}!</span>`,
+	<div>
+	</div>
+
+	`,
     directives: [NgIf]
 })
 export class Hello {
@@ -14,6 +17,14 @@ export class Hello {
           this.name = 'NEW World'
         }, 2000);
     }
+	
+	hideDiv1(){
+		return true;
+	}	
+	
+	hideDiv2(){
+		return false;
+	}
 }
 
 bootstrap(Hello);
